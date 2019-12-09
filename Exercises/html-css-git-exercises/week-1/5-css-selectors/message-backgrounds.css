@@ -1,1 +1,10 @@
 /* Add your CSS code below */
+#first-message {
+  background-color: red;
+}
+#sec {
+  background-color: cadetblue;
+}
+#last {
+  background-color: yellow;
+}
