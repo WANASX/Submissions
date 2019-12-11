@@ -7,3 +7,7 @@
 }
 
 /* Add your own CSS code below */
+.countries {
+  justify-content: space-between;
+  flex-direction: row;
+}

@@ -1,1 +1,6 @@
 /* Add your own CSS code below */
+.container {
+  flex-direction: row-reverse;
+  display: inline-flex;
+  width: 100%;
+}
