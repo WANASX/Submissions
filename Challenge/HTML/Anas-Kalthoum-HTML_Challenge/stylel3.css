@@ -1,0 +1,154 @@
+body {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.menu {
+  width: 25%;
+  float: left;
+  padding: 15px;
+}
+
+div {
+  color: white;
+}
+.readcolo {
+  color: rgb(51, 61, 63);
+}
+
+img {
+  height: 200px;
+  width: 200px;
+}
+
+#headiv {
+  background: rgb(54, 86, 89) none repeat scroll 0% 0%;
+}
+/* Start General */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+/* End General */
+
+/* Start Navbar */
+nav ul {
+  background: rgb(40, 61, 64) none repeat scroll 0% 0%;
+}
+nav ul > li {
+  padding: 15px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  margin-left: -5px;
+}
+
+nav ul > li:last-of-type {
+  float: right;
+}
+nav ul > li:last-of-type a .fa {
+  font-size: 21px;
+}
+/* End Navbar */
+
+/* Start Menue Right */
+.nav1 .ul1 > li:last-of-type {
+  position: relative;
+  display: none;
+}
+.nav1 .ul1 > ol {
+  position: absolute;
+  top: 49px;
+  right: 0;
+  background: #333;
+  text-align: center;
+  list-style: none;
+  display: none;
+}
+.nav1 .ul1 > ol > li {
+  width: 100vw;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+}
+.nav1 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.nav1 .ul1 input {
+  opacity: 0.7;
+  padding: 5px;
+  float: right;
+}
+.menu33 {
+  width: 35%;
+  float: left;
+  margin-left: 50px;
+
+  margin-right: 90px;
+}
+
+.main33 {
+  width: 65%;
+  margin-left: 50px;
+}
+.mais22 {
+  width: 19%;
+  float: left;
+  margin-right: 50px;
+}
+.mains22 {
+  width: 81%;
+}
+.block1 {
+  width: 19%;
+  float: left;
+  margin-right: 50px;
+}
+.block2 {
+  width: 30%;
+  float: left;
+  border-right: 1px white solid;
+}
+.block3 {
+  width: 30%;
+  float: left;
+  margin-left: 20px;
+}
+#divsa {
+  margin-left: 25%;
+}
+textarea {
+  width: 489px;
+  height: 200px;
+  text-align: center;
+}
+input {
+  text-align: center;
+}
+footer {
+  clear: both;
+}
+#cisa {
+  margin-left: 70px;
+}
+#lastthing {
+  margin-left: 120px;
+}
+
+#lastss {
+  margin-left: 160px;
+}
+.li1 {
+  border-left: 1px solid white;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+.ul1 {
+  padding: 5px;
+}
+#underl {
+  text-decoration: underline;
+}

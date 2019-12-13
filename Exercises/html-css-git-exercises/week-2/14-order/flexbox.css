@@ -3,3 +3,7 @@
 }
 
 /* Add your own CSS code below */
+.countries--first {
+  order: 2;
+  flex-direction: row-reverse;
+}
