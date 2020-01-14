@@ -1,5 +1,9 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./index.css";
+
+import Search from "./Search/Search";
+import Mainimg from "./Mainimg/mainimg";
+import Iamgew from "./imgesq/imgall";
 
 class App extends Component {
   constructor(props) {
@@ -9,9 +13,18 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        <header className="app__header"></header>
-        <main className="app__main"></main>
+      <div>
+        <header>
+          <Search />
+        </header>
+
+        <div id="srcImage">
+          <Mainimg />
+        </div>
+
+        <div>
+          <Iamgew />
+        </div>
       </div>
     );
   }

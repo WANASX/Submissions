@@ -15,6 +15,74 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background-color: #9ccef4;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+header {
+  background-color: #759eda;
+  height: 2em;
+  padding: 20px;
+}
+
+button {
+  border: none;
+  height: 45px;
+  background-color: #5879c7;
+  margin-top: -5px;
+}
+
+#searchBar {
+  background-color: #759eda;
+  border: none;
+  color: white;
+  font-size: large;
+}
+
+.weatherImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+#srcImage {
+  width: 35%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  line-height: 10px;
+  font-size: 30px;
+}
+#srcImagew {
+  width: 400px;
+  height: 250px;
+}
+
+.imageResize {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+#overcastCloud {
+  color: white;
+  margin-top: -10px;
+}
+
+#HumidityPressure {
+  font-size: 18px;
+}
 
 /*  Search bar */
 
