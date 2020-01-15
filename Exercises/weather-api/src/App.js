@@ -4,6 +4,7 @@ import "./index.css";
 import Search from "./Search/Search";
 import Mainimg from "./Mainimg/mainimg";
 import Iamgew from "./imgesq/imgall";
+import FakeWeather from "./JSON/FakeWeather";
 
 class App extends Component {
   constructor(props) {
@@ -19,7 +20,10 @@ class App extends Component {
         </header>
 
         <div id="srcImage">
-          <Mainimg />
+          <Mainimg
+            humidity={FakeWeather.list[0].main.humidity}
+            pressure={FakeWeather.list[0].main.pressure}
+          />
         </div>
 
         <div>

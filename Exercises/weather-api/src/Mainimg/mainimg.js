@@ -12,7 +12,7 @@ const Mainimg = props => {
       </span>
       <span>10&deg; to 11&#8451;</span>
       <p id="HumidityPressure">
-        <b>Humidity</b> 78% <b>Pressure</b> 1008.48
+        <b>Humidity</b> {props.humidity}% <b>Pressure</b> {props.pressure}
       </p>
     </div>
   );

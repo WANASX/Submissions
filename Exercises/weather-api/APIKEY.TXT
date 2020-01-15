@@ -1,0 +1,5 @@
+72c33d2daa905d994eee45b75b32e4dd
+
+
+
+http://api.openweathermap.org/data/2.5/forecast?q=${CITY_NAME}&cnt=8&units=metric&appid=${72c33d2daa905d994eee45b75b32e4dd}
