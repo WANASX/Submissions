@@ -1,51 +1,63 @@
 import React from "react";
+import storm from "../img/weather-icons/storm.svg";
 import imgFile1 from "../img/weather-icons/clear.svg";
 import imgFile2 from "../img/weather-icons/cloudy.svg";
 import imageFile3 from "../img/weather-icons/drizzle.svg";
 import imageFile4 from "../img/weather-icons/fog.svg";
 import imageFile5 from "../img/weather-icons/mostlycloudy.svg";
 import imageFile6 from "../img/weather-icons/partlycloudy.svg";
-import imageFile7 from "../img/weather-icons/rain.svg";
-const imgw = props => {
-  return (
-    <div className="weatherImages">
-      <div className="imageResize">
-        <p>03:00</p>
-        <img src={imageFile7} />
-        <p>8&#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>06:00</p>
-        <img src={imageFile6} />
-        <p>9&#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>09:00</p>
-        <img src={imageFile5} />
-        <p>14&#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>12:00</p>
-        <img src={imageFile4} />
-        <p>17&#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>15:00</p>
-        <img src={imageFile3} />
-        <p>19&#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>21:00</p>
-        <img src={imgFile2} />
-        <p>13 &#8451;</p>
-      </div>
-      <div className="imageResize">
-        <p>22:00</p>
-        <img src={imgFile1} />
-        <p>14&#8451;</p>
-      </div>
-    </div>
-  );
-};
+import snow from "../img/weather-icons/snow.svg";
 
-export default imgw;
+import imageFile7 from "../img/weather-icons/rain.svg";
+function checkChange(check) {
+  if (check < 300) {
+    return <img src={storm} />;
+  } else if (check >= 300 && check >= 499) {
+    <img src={imageFile3} />;
+  } else if (check >= 500 && check >= 599) {
+    <img src={imageFile7} />;
+  } else if (check >= 600 && check >= 699) {
+    <img src={snow} />;
+  } else if (check == 800) {
+    <img src={imgFile1} />;
+  } else if (check >= 700 && check >= 799) {
+    <img src={imageFile4} />;
+  } else if (check == 801) {
+    <img src={imageFile6} />;
+  } else if (check >= 801 && check >= 805) {
+    <img src={imageFile5} />;
+  } else {
+    check;
+  }
+
+  <img src={imageFile5} />;
+}
+
+export default function imgw(props) {
+  return (
+    <>
+      <div className="weatherImages">
+        <div className="imageResize">
+          {checkChange(props.all.weather[0].id)}
+          <p>03:00</p>
+          <img src={imageFile7} />
+          <p>8&#8451;</p>
+        </div>
+      </div>
+    </>
+  );
+}
+class WeatherLater extends Component {
+  render() {
+    return (
+      <div className="weatherImages">
+        <div className="forecast-imageResize">
+          <p>{this.props.weather_list.dt_txt.substring(11, 16)}</p>
+          {checkTemp(this.props.weather_list.weather[0].id)}
+          <p>{Math.floor(this.props.weather_list.main.temp - 273.15)} C°</p>
+          {console.log(this.props.weather_list.weather[0].id)}
+        </div>
+      </div>
+    );
+  }
+}
