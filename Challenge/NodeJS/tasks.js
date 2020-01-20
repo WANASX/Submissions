@@ -87,6 +87,21 @@ function help() {
   console.log("do you mean quit \n exit \n hello  ");
 }
 /**
+ *  add
+ */
+function add() {}
+
+/**
+ * remove
+ */
+
+function remove() {}
+
+/**
+ *  list
+ */
+function list() {}
+/**
  *
  */
 
