@@ -32,12 +32,19 @@ function startApp(name) {
  * @returns {void}
  */
 function onDataReceived(text) {
+  var stringArray = text.split(/(\s+)/);
   if (text === "quit\n" || text === "exit\n") {
     quit();
-  } else if (text === "hello\n") {
-    hello();
+  } else if (stringArray[0] === "hello") {
+    if (stringArray[2] != " ") hello(stringArray[2]);
+    else hello("");
   } else if (text === "help\n") {
     help();
+  } else if (text === "display\n") {
+    display();
+  } else if (stringArray[0] === "add") {
+    if (stringArray[2] != "") add(stringArray[2]);
+    else console.log("enter somthing to add to the list please");
   } else {
     unknownCommand(text);
   }
@@ -59,8 +66,9 @@ function unknownCommand(c) {
  *
  * @returns {void}
  */
-function hello() {
-  console.log("hello!");
+function hello(name) {
+  if (name == "") console.log("hello!");
+  else console.log("hello " + name + "!");
 }
 
 /**
@@ -78,6 +86,9 @@ function quit() {
 function help() {
   console.log("do you mean quit \n exit \n hello  ");
 }
+/**
+ *
+ */
 
 // The following line starts the application
 startApp("Anas Kalthoum");
