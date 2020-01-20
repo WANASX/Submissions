@@ -27,3 +27,13 @@ VALUES (8, anas, Age, Gender,Points);
 
    1.1 - insert into ProduceTable (Name, Company, CompanyDate) select  e.Name, e.Company,c.Date 
           from employees e,companies c where e.Company =c.Name
+2 - select name from ProduceTable where CompanyDate<2000
+
+3 - Select Company from Produceemployees where Role='Graphic Designer'
+
+
+1 - SELECT FROM students MAX (Points) AS "Max Points" ;
+2 - SELECT AVG (Points) FROM students
+3 - SELECT COUNT (name) FROM students where Points=500
+4 - SELECT name FROM students WHERE Name LIKE '%s%';
+5 - SELECT * FROM students ORDER BY Points ASC
