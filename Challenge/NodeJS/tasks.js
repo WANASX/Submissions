@@ -31,6 +31,7 @@ function startApp(name) {
  * @param  {string} text data typed by the user
  * @returns {void}
  */
+var array = [];
 function onDataReceived(text) {
   var stringArray = text.split(/(\s+)/);
   if (text === "quit\n" || text === "exit\n") {
@@ -42,6 +43,8 @@ function onDataReceived(text) {
     help();
   } else if (text === "display\n") {
     display();
+  } else if (text === "add") {
+    add(array, item);
   } else if (stringArray[0] === "add") {
     if (stringArray[2] != "") add(stringArray[2]);
     else console.log("enter somthing to add to the list please");
@@ -89,7 +92,14 @@ function help() {
 /**
  *  add
  */
-function add() {}
+function add(array, item) {
+  if (item == array.length) {
+    item = array.split(" ");
+    item = array.shift();
+    item = array.replace("\n", "");
+    console.log(array);
+  }
+}
 
 /**
  * remove
