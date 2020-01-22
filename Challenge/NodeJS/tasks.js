@@ -45,6 +45,12 @@ function onDataReceived(text) {
     list();
   } else if (stringArray[0] === "add") {
     add(stringArray);
+  } else if (stringArray[0] === "remove") {
+    listOfTasks.pop();
+  } else if (stringArray[0] === "remove 1") {
+    listOfTasks.splice(0, 1);
+  } else if (stringArray[0] === "remove 2") {
+    listOfTasks.splice(2, 1);
   } else {
     unknownCommand(text);
   }
@@ -99,7 +105,7 @@ function add(array) {
  * remove
  */
 
-function remove() {}
+function remove(array) {}
 
 /**
  *  list
