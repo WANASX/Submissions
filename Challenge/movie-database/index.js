@@ -21,7 +21,20 @@ app.get("/test", (req, res) => {
 app.get("/time", (req, res) => {
   res.send({ status: 200, message: TIME() });
 });
-
+app.get("/hello/:Id", (req, res) => {
+  res.send({ status: 200, message: "Hello, " + req.params.Id });
+});
+app.get("/search/:Se?", (req, res) => {
+  if (req.params.Se != undefined) {
+    res.send({ status: 200, message: "ok, ", data: req.params.Se });
+  } else {
+    res.send({
+      status: 500,
+      error: true,
+      message: "you have to provide a search"
+    });
+  }
+});
 var server = http.createServer(app);
 server.listen(port, () => {
   console.log("Server is starting = " + port);
