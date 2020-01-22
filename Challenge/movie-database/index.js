@@ -1,18 +1,28 @@
-// Load HTTP module
-const http = require("http");
+// my node start point
 
-const hostname = "127.0.0.1";
-const port = 8000;
+var express = require("express");
+var http = require("http");
 
-// Create HTTP server
-const server = http.createServer((req, res) => {
-  // Set the response HTTP header with HTTP status and Content type
-  res.writeHead(200, { "Content-Type": "text/plain" });
-
-  res.end("OK");
+var port = 3000;
+var app = express();
+function TIME() {
+  var TIME = new Date();
+  var TIME = TIME.getHours() + ":" + TIME.getSeconds();
+  return TIME;
+}
+TIME();
+// set your first route
+app.get("/", (req, res) => {
+  res.send("Hello Nodemon!");
+});
+app.get("/test", (req, res) => {
+  res.send({ status: 200, message: "ok" });
+});
+app.get("/time", (req, res) => {
+  res.send({ status: 200, message: TIME() });
 });
 
-// Prints a log once the server starts listening
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+var server = http.createServer(app);
+server.listen(port, () => {
+  console.log("Server is starting = " + port);
 });
