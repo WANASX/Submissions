@@ -1,0 +1,216 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+.page-header {
+  padding-top: 80px;
+}
+
+.navbar-header {
+  margin-top: -75px;
+  font-size: 15px;
+  margin-left: 7%;
+}
+
+.sticky-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999999;
+  background-image: linear-gradient(
+    to top,
+    rgba(200, 0, 0, 0),
+    rgba(200, 0, 0, 1)
+  );
+}
+
+.peach-a {
+  display: red;
+  margin-left: 20px;
+  color: red;
+  background-color: red;
+  font-family: Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  text-transform: uppercase;
+  color: white;
+  text-shadow: 0 0 0.26em white;
+}
+
+.peach-a:hover {
+  background: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.peach-a:active {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.pricingdiv ul.theplan {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  color: lime;
+  background: black;
+  position: relative;
+  width: 250px;
+  /* width of each table */
+  margin-right: 10px;
+  /* spacing between tables */
+  margin-bottom: 1em;
+  transition: all 0.5s;
+}
+
+/* PRICE ARE */
+.pricingdiv ul.theplan:hover {
+  /* when mouse hover over pricing table */
+  transform: scale(1.05);
+  transition: all 0.5s;
+  z-index: 100;
+  box-shadow: 0 0 10px lime;
+}
+
+.pricingdiv ul.theplan li {
+  margin: 10px 20px;
+  position: relative;
+}
+
+.pricingdiv ul.theplan li.title {
+  font-size: 150%;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border-bottom: 5px solid white;
+}
+
+.pricingdiv a.pricebutton {
+  background: gray;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 5px;
+  color: navy;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.pricingdiv a.pricebutton:hover {
+  background: lime;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  margin: 10px auto;
+  border-radius: 5px;
+  color: navy;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 500px) {
+  .pricingdiv ul.theplan {
+    border-radius: 0;
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .pricingdiv ul.theplan:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .pricingdiv a.pricebutton {
+    display: block;
+  }
+}
+
+.pricingdiv {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-header {
+    margin-top: 5%;
+  }
+}
+
+#bodyDownload {
+  background-image: url("../img/pubg3.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#colorD {
+  position: relative;
+  z-index: 1;
+  color: black;
+  font-size: 30px;
+  font-family: "Bowlby One SC script=all rev=2", "Adobe Blank";
+  text-shadow: 2px 2px gray;
+}
+
+#colorD:before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  opacity: 0.4;
+  z-index: -1;
+  background-color: white;
+  font-style: bold;
+  border: red 1px solid;
+}
+
+#divDownload {
+  text-align: center;
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+#buttonD {
+  text-align: center;
+
+  margin-top: 3%;
+}
+
+#myDIV {
+  color: red;
+  font-style: bold;
+  font-size: 20px;
+  display: none;
+}
+
+#BodyE {
+  background-image: url(../img/pubg7.jpg);
+}
+
+#mainDivE {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+
+.newdiv {
+  height: 200px;
+  width: 700px;
+  border: solid 2px gray;
+  background-color: rgb(255, 255, 255, 0.6);
+  margin: 5px;
+}
+
+.imgN {
+  width: 200px;
+  height: 200px;
+  float: left;
+}
+
+.headE {
+  margin-left: 10%;
+}
