@@ -23,7 +23,7 @@ function byDate(a, b) {
   return byDate;
 }
 var lastarray = movies.sort(byDate);
-
+/* end */
 /* by rating */
 function byRate(a, b) {
   const bandA = a.rating;
@@ -38,7 +38,8 @@ function byRate(a, b) {
   return byRate;
 }
 var lastbyRate = movies.sort(byRate);
-/* by rating */
+/* end */
+/* by title */
 function byTitle(a, b) {
   const bandA = a.title;
   const bandB = b.title;
@@ -52,7 +53,8 @@ function byTitle(a, b) {
   return byTitle;
 }
 var lastbyTitle = movies.sort(byTitle);
-console.log(lastbyTitle);
+
+/* end */
 
 var port = 3000;
 var app = express();
@@ -108,6 +110,33 @@ app.get("/movies/read/by-rating", (req, res) => {
 app.get("/movies/read/by-title", (req, res) => {
   res.send({ status: 200, data: lastbyTitle });
 });
+app.get("/movies/id/:ID", (req, res) => {
+  let test = parseInt(req.params.ID);
+  if (test && test < movies.length) {
+    if (test < movies.length) {
+      res.send({
+        status: 200,
+        data: movies[test]
+      });
+      console.log();
+    } else {
+      //wrong request
+      res.status(404).send({
+        status: 404,
+        error: true,
+        message: "the movie " + test + " doesn't exist"
+      });
+    }
+  } else {
+    //wrong request
+    res.status(404).send({
+      status: 404,
+      error: true,
+      message: "the movie " + test + " doesn't exist"
+    });
+  }
+});
+
 var server = http.createServer(app);
 server.listen(port, () => {
   console.log("Server is starting = " + port);
