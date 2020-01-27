@@ -3209,7 +3209,7 @@ mark {
 .cd-section--bg-fixed .text-component a {
   color: hsl(0, 0%, 100%);
   color: var(--cd-color-3);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 1px 3px rgbaz(0, 0, 0, 0.3);
 }
 @media (min-width: 64rem) {
   @supports (background-attachment: fixed) {
